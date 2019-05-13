@@ -12,9 +12,6 @@ package MAxFlowAlgorithm;
  *
  */
 
-import java.util.*;
-import java.lang.*;
-import java.io.*;
 import java.util.LinkedList;
 
 class MaximumFlow {
@@ -85,8 +82,8 @@ class MaximumFlow {
         parent[s] = -1;
 
         System.out.println();
-        System.out.print("Augmented path :");
-        System.out.print(1 + "->" + 0);
+       // System.out.print("Augmented path :");
+        //System.out.print(1 + "->" + 0);
 
         while (queue.size() != 0) {
             int u = queue.poll();
@@ -95,7 +92,7 @@ class MaximumFlow {
                 if (visitedNodes[v] == false && rGraph[u][v] > 0) {
                     queue.add(v);
                     parent[v] = u;
-                    System.out.print("," + parent[v] + "->" + v);
+                   // System.out.print("," + parent[v] + "->" + v);
                     visitedNodes[v] = true;
                 }
             }
